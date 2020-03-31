@@ -16,8 +16,8 @@ class SimilarityFinderBehaviourTest {
     }
 
     @Test
-    void stateTest() {
-
-
+    void behaviourTestWhenBothSeqAreEmpty() {
+        int [] seq1 = {}, seq2 = {};
+        assertDoesNotThrow(() -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
     }
 }
