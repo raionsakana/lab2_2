@@ -33,4 +33,11 @@ class SimilarityFinderBehaviourTest {
         assertDoesNotThrow(() -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
     }
 
+    @Test
+    void behaviourTestWhenBothSeqAreNull() {
+        assertThrows(NullPointerException.class, () -> similarityFinder.calculateJackardSimilarity(null, null));
+    }
+
+
+
 }
