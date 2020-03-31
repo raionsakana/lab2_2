@@ -11,13 +11,16 @@ class SimilarityFinderStateTest {
     private SimilarityFinder similarityFinder;
 
     @BeforeEach
-    public void init() {
+    void init() {
         similarityFinder = new SimilarityFinder(new SequenceSearcherMock());
     }
 
     @Test
-    void stateTest() {
-
-
+    void stateTestWhenBothSeqAreEmpty() {
+        int [] seq1 = {}, seg2 = {};
+        assertEquals(similarityFinder.calculateJackardSimilarity(seq1, seg2), 1.0);
     }
+
+    
+
 }

@@ -14,7 +14,7 @@ class SimilarityFinderBehaviourTest {
     public void init() {
         similarityFinder = new SimilarityFinder(new SequenceSearcherMock());
     }
-    
+
     @Test
     void stateTest() {
 
