@@ -38,6 +38,10 @@ class SimilarityFinderBehaviourTest {
         assertThrows(NullPointerException.class, () -> similarityFinder.calculateJackardSimilarity(null, null));
     }
 
-
+    @Test
+    void behaviourTestWhenFirstSeqIsNull() {
+        int [] seq = {1, 2, 3};
+        assertThrows(NullPointerException.class, () -> similarityFinder.calculateJackardSimilarity(null, seq));
+    }
 
 }
