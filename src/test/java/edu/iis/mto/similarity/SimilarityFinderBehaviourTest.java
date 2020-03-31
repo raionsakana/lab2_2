@@ -50,4 +50,10 @@ class SimilarityFinderBehaviourTest {
         assertThrows(NullPointerException.class, () -> similarityFinder.calculateJackardSimilarity(seq, null));
     }
 
+    @Test
+    void behaviourTestWhenSeqAreFull() {
+        int [] seq1 = {1, 2, 3}, seq2 = {1};
+        assertDoesNotThrow(() -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
+    }
+
 }
