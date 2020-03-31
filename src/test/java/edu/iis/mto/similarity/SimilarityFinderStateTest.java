@@ -27,5 +27,10 @@ class SimilarityFinderStateTest {
         assertEquals(similarityFinder.calculateJackardSimilarity(seq1, seg2), 0.0);
     }
 
+    @Test
+    void stateTestWhenSecondSeqAreEmpty() {
+        int [] seq1 = {4, 5, 6}, seg2 = {};
+        assertEquals(similarityFinder.calculateJackardSimilarity(seq1, seg2), 0.0);
+    }
 
 }
