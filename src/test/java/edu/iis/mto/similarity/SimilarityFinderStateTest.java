@@ -63,4 +63,10 @@ class SimilarityFinderStateTest {
         assertEquals(similarityFinder.calculateJackardSimilarity(seq1, seg2), 0.75);
     }
 
+    @Test
+    void stateTestWhenBothSeqAreFullAndInSixTenthsEqual() {
+        int [] seq1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, seg2 = {1, 2, 3, 4, 5, 6};
+        assertEquals(similarityFinder.calculateJackardSimilarity(seq1, seg2), 0.60);
+    }
+
 }
