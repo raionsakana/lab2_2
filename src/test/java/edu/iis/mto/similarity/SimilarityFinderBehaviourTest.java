@@ -12,7 +12,7 @@ class SimilarityFinderBehaviourTest {
     private SimilarityFinder similarityFinder;
 
     @BeforeEach
-    public void init() {
+    void init() {
         similarityFinder = new SimilarityFinder(new SequenceSearcherMock());
     }
 
