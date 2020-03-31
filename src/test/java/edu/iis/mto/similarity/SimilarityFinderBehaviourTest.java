@@ -20,4 +20,13 @@ class SimilarityFinderBehaviourTest {
         int [] seq1 = {}, seq2 = {};
         assertDoesNotThrow(() -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
     }
+
+    @Test
+    void behaviourTestWhenFirstSeqIsEmpty() {
+        int [] seq1 = {}, seq2 = {1, 2, 3};
+        assertDoesNotThrow(() -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
+    }
+
+    
+
 }
