@@ -8,5 +8,7 @@ class SimilarityFinderBehaviourTest {
 
     @Test
     void stateTest() {
+
+
     }
 }
