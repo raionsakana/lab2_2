@@ -1,5 +1,6 @@
 package edu.iis.mto.similarity;
 
+import edu.iis.mto.search.SearchResult;
 import edu.iis.mto.search.SequenceSearcherMock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -54,6 +55,13 @@ class SimilarityFinderBehaviourTest {
     void behaviourTestWhenSeqAreFull() {
         int [] seq1 = {1, 2, 3}, seq2 = {1};
         assertDoesNotThrow(() -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
+    }
+
+    @Test
+    void behaviourTestWhenSearcherIsNull() {
+        int [] seq1 = {1, 2, 3}, seq2 = {1};
+        SimilarityFinder similarityFinderNull = new SimilarityFinder(null);
+        assertThrows(NullPointerException.class, () -> similarityFinderNull.calculateJackardSimilarity(seq1, seq2));
     }
 
 }
